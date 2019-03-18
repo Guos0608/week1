@@ -1,0 +1,79 @@
+@import 'common.scss';
+$browser-default-font-size:150px;
+@function px2rem($px) {
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+;
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .head {
+        width: 100%;
+        height: px2rem(256px);
+        background: #f8f8f8;
+        border-bottom: 1px solid #000;
+        display: flex;
+        line-height: px2rem(256px);
+        justify-content: space-around;
+        i {
+            font-size: px2rem(100px);
+            &:last-child {
+                font-size: px2rem(150px);
+            }
+        }
+        h1 {
+            font-size: px2rem(100px);
+        }
+    }
+    .content {
+        flex: 1;
+        background: #fcfcfc;
+        overflow: hidden;
+        .c-head {
+            width: 100%;
+            height: px2rem(208px);
+            background: #fff;
+            display: flex;
+            justify-content: space-around;
+            span {
+                font-size: px2rem(90px);
+                line-height: px2rem(208px);
+                &:hover {
+                    border-bottom: px2rem(10px) solid #000;
+                }
+            }
+        }
+        .banner1 {
+            width: 100%;
+            height: 100%;
+            background: pink;
+        }
+        .banner2 {
+            width: 100%;
+            height: 100%;
+            background: skyblue;
+            display: none;
+        }
+    }
+    .foot {
+        width: 100%;
+        height: px2rem(196px);
+        background: #ffffff;
+        border-top: 1px solid #000;
+        display: flex;
+        line-height: px2rem(196px);
+        justify-content: space-around;
+        i {
+            font-size: px2rem(100px);
+        }
+    }
+}
